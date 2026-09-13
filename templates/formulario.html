@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Manda a real sobre a cantina do IFRO!</h1>
+    <p style="text-align: center;">Responda a pesquisa e os primeiros participantes ganham um cupom de desconto ou brinde!</p>
+    
+    <form method="POST">
+        <h2>Dados Pessoais</h2>
+        
+        <label for="nome">Nome Completo: <span style="color: red;">*</span></label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="turma">Turma: <span style="color: red;">*</span></label>
+        <input type="text" id="turma" name="turma" required>
+
+        <label for="nome_mae">Nome da Mãe: <span style="color: red;">*</span></label>
+        <input type="text" id="nome_mae" name="nome_mae" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="celular">Número de Celular:</label>
+        <input type="tel" id="celular" name="celular" placeholder="(00) 00000-0000">
+
+        <h2>Sobre a Cantina</h2>
+        
+        <label for="lanches">O que você acha dos lanches? <span style="color: red;">*</span></label>
+        <select id="lanches" name="lanches" required>
+            <option value="" disabled selected>Selecione uma opção...</option>
+            <option value="Excelentes">Excelentes</option>
+            <option value="Bons">Bons</option>
+            <option value="Regulares">Regulares</option>
+            <option value="Ruins">Ruins</option>
+        </select>
+        
+        <label for="lanches">O que você acha do atendimento? <span style="color: red;">*</span></label>
+        <select id="lanches" name="lanches" required>
+            <option value="" disabled selected>Selecione uma opção...</option>
+            <option value="Excelentes">Excelentes</option>
+            <option value="Bons">Bons</option>
+            <option value="Regulares">Regulares</option>
+            <option value="Ruins">Ruins</option>
+        </select>
+
+        <label for="lanches">O que você acha dos preços? <span style="color: red;">*</span></label>
+        <select id="lanches" name="lanches" required>
+            <option value="" disabled selected>Selecione uma opção...</option>
+            <option value="Excelentes">Excelentes</option>
+            <option value="Bons">Bons</option>
+            <option value="Regulares">Regulares</option>
+            <option value="Ruins">Ruins</option>
+        </select>
+
+        <label for="feedback_lanches">Quer deixar algum comentário sobre os lanches? (Opcional):</label>
+        <textarea id="feedback_lanches" name="feedback_lanches" rows="3" placeholder="Escreva seu feedback aqui..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; font-family: Arial, sans-serif; resize: vertical;"></textarea>
+
+        <button type="submit">Enviar e resgatar cupom!</button>
+    </form>
+{% endblock %}

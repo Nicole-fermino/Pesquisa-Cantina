@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="color: #d32f2f;">Atenção!</h1>
+    <p class="aviso">Esta é uma simulação de Phishing.</p>
+    
+    <p style="text-align: center;">
+        Você acabou de participar de uma simulação do Trabalho de Segurança da Informação (Turma 3ºB Informática).
+    </p>
+
+    <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+        <video width="100%" max-width="80px" controls>
+            <source src="{{ url_for('static', filename='phishing.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+
+    <p style="text-align: center;">
+        Lembre-se: Golpistas utilizam a promessa de recompensas, prêmios ou brindes (como descontos) para incentivar as pessoas a passarem dados sensíveis. Nunca insira informações excessivas em links suspeitos!
+    </p>
+{% endblock %}
